@@ -1,0 +1,91 @@
+.theracing-api-admin {
+    position: relative;
+    margin-left: -1.25rem;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    overflow-x: hidden;
+}
+
+.theracing-api-admin__header {
+    display: flex;
+}
+
+.theracing-api-admin__menu,
+.theracing-api-admin__header {
+    background-color: #FFF;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    border-bottom: 1px solid rgb( 0 0 0 / .1 );
+}
+
+.theracing-api-admin__menu {
+    position: sticky;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    gap: 1em;
+    z-index: 5;
+}
+
+.theracing-api-admin__menu a {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+}
+
+.theracing-api-admin__menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+}
+
+.theracing-api-admin__menu a:hover::after,
+.theracing-api-admin__menu a:focus::after {
+    background-color: currentColor;
+}
+
+.theracing-api-admin-content {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgb( 0 0 0 / .1 );
+}
+
+.theracing-api-admin-content__body {
+    flex: 0 0 65%;
+}
+
+.theracing-api-admin-content__side {
+    flex: 0 0 35%;
+    padding: 1.25rem;
+    border-left: 1px solid rgb( 0 0 0 / .1 );
+}
+
+.theracing-api-admin-content__side .wp-list-table {
+    max-width: 32rem;
+}
+
+.theracing-api-admin-section {
+    border-bottom: 1px solid rgb( 0 0 0 / .1 );
+    padding: 1.25rem;
+}
+
+.theracing-api-admin-section h2 {
+    margin: 0 0 1.25rem;
+}
+
+.theracing-api-admin code {
+    display: inline-flex;
+    background-color: black;
+    color: white;
+    padding: .375em;
+    font-size: .75rem;
+    line-height: 1.25;
+    border-radius: .375em;
+}

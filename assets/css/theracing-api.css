@@ -1,0 +1,489 @@
+.theracing-api--accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25em;
+    margin-bottom: .5rem;
+    padding: .5rem .75rem;
+}
+
+.theracing-api-last-updated {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: #666;
+    padding: .5rem 0;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: .25rem;
+}
+
+.theracing-api--accordion:nth-child(1n) {
+    background-color: #F1F5F9;
+}
+
+.theracing-api--accordion:nth-child(2n) {
+    background-color: #F8FAFC;
+}
+
+.racecard {
+    margin-bottom: 1.5rem;
+}
+
+[aria-expanded="false"] > .racecard-table-overflow {
+    display: flex;
+    flex-direction: column;
+
+    height: 0;
+    min-height: 0;
+    max-height: 0;
+
+    overflow: hidden;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[aria-expanded="true"] > .racecard-table-overflow {
+    height: 100%;
+    max-height: 99em;
+}
+
+.racecard-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.racecard-head--accordion {
+    cursor: pointer;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.racecard-head-inner {
+    flex-grow: 1;
+    max-width: calc( 100% - 4rem );
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.racecard-head-toggle {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .75em;
+    color: #FFF;
+    background-color: #02b805;
+    border-radius: 10em;
+}
+
+.racecard-head-toggle svg {
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: currentColor;
+}
+
+[aria-expanded="true"] .racecard-head-toggle {
+    color: #02b805;
+    background-color: #0d1522;
+}
+
+[aria-expanded="true"] .racecard-head-toggle svg {
+    transform: rotate(-180deg);
+}
+
+.racecard-head-race {
+    flex-grow: 1;
+}
+
+.racecard-head-race__name {
+    font-size: .875rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.racecard-head-race__date {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    gap: .25rem;
+}
+
+.racecard-table-head-cell--position {
+    width: 2.5rem;
+}
+
+.racecard-table-head-cell--horse-jockey {
+    min-width: 10rem !important;
+}
+
+.racecard-age,
+.racecard-weights {
+    display: flex;
+    flex-direction: column;
+}
+
+.racecard-head-race {
+    display: flex;
+    flex-direction: column;
+}
+
+.racecard-head-race__title {
+    font-size: clamp(1rem, 0.909rem + 0.455vw, 1.25rem);
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.racecard-head-race-date {
+    font-size: 0.875rem;
+    flex-shrink: 0;
+    padding: 1em 0 0;
+    border-top: 1px dashed rgb( 0 0 0 / .25 );
+}
+
+@media screen and (min-width:800px) {
+    .racecard-head-race-date {
+        padding: 0 0 0 1em;
+        border-top: 0 none;
+        border-left: 1px dashed rgb( 0 0 0 / .25 );
+    }
+}
+
+.racecard-head--accordion .racecard-details {
+    border-radius: .25em;
+}
+
+.racecard-details {
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    font-size: clamp( 0.75rem, 1.5vw, 0.875rem );
+    color: #0d1522;
+    background-color: #f1f1f1;
+}
+
+.racecard-details > strong {
+    font-size: clamp(1rem, 0.909rem + 0.455vw, 1.25rem);
+}
+
+.racecard-details-list {
+    list-style: none;
+    flex-grow: 1;
+    column-count: 1;
+    margin: 0;
+}
+
+@media screen and (min-width:30em) {
+    .racecard-details-list {
+        column-count: 2;
+    }
+}
+
+.racecard-details-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.racecard-details-list li span {
+    border-radius: .25em;
+    padding: .25em .5em;
+    background-color: rgb( 0 0 0 / .05 );
+    font-size: .875rem;
+    line-height: 1.25;
+}
+
+.racecard-horse {
+    font-size: .875rem;
+}
+
+.racecard-details-list li {
+    padding: .125em 0;
+}
+
+.racecard-silk-horse-jockey {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    align-items: center;
+    line-height: 1;
+}
+
+.racecard-table-overflow {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.racecard-table {
+    margin: 0;
+    background-color: #FFF;
+}
+
+.racecard-table,
+.racecard-table td {
+    border: 1px solid rgb( 0 0 0 / .05 );
+}
+
+.racecard-trainer-owner {
+    display: flex;
+    flex-direction: column;
+}
+
+.racecard-table tr {
+    border-bottom: 0 none;
+}
+
+.racecard-table th,
+.racecard-table td {
+    font-size: 0.875rem;
+    vertical-align: middle;
+}
+
+.racecard-table td {
+    padding: .25em;
+}
+
+.racecard-table th {
+    min-width: 3.5rem;
+    border: 0 none;
+    background-image: linear-gradient(135deg, #3d444e, #0d1522);
+}
+
+.racecard-silk {
+    width: 2.5rem;
+    height: 2.5rem;
+    aspect-ratio: 1/1;
+}
+
+.racecard-table-affiliate,
+.racecard-odds-cell {
+    width: 3.5rem;
+}
+
+.racecard-table-affiliate {
+    position: relative;
+    height: 8rem;
+}
+
+.racecard-odds-cell {
+    padding: 0 !important;
+    text-align: center;
+}
+
+.racecard-table-affiliate img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transform: rotate(-90deg) translate3d(0,-1rem,0);
+    object-fit: contain;
+    max-width: 5.5rem;
+}
+
+[class*="racecard-table-affiliate--"] {
+    background-image: none !important;
+}
+
+.racecard-table-affiliate--bet365 {
+    color: #FFF;
+    background-color: #027b5b;
+}
+
+.racecard-table-affiliate--sky-bet {
+    color: #FFF;
+    background-color: #002c91;
+}
+
+.racecard-table-affiliate--paddy-power {
+    color: #FFF;
+    background-color: #013b29;
+}
+
+.racecard-table-affiliate--william-hill {
+    color: #FFF;
+    background-color: #00003c;
+}
+
+.racecard-table-affiliate--888-sport {
+    color: #FFF;
+    background-color: #fc6200;
+}
+
+.racecard-table-affiliate--betfair-sportsbook {
+    color: #212121;
+    background-color: #ffb80c;
+}
+
+.racecard-table-affiliate--bet-victor {
+    color: #FFF;
+    background-color: #262d35;
+}
+
+.racecard-table-affiliate--coral {
+    color: #FFF;
+    background-color: #004696;
+}
+
+.racecard-table-affiliate--unibet {
+    color: #FFF;
+    background-color: #000000;
+}
+
+.racecard-table-affiliate--spread-ex {
+    color: #FFF;
+    background-color: #000000;
+}
+
+.racecard-table-affiliate--betfred {
+    color: #FFF;
+    background-color: #002a55;
+}
+
+.racecard-table-affiliate--boyle-sports {
+    color: #FFF;
+    background-color: #001f60;
+}
+
+.racecard-table-affiliate--10-bet {
+    color: #FFF;
+    background-color: #000;
+}
+
+.racecard-table-affiliate--star-sports {
+    color: #FFF;
+    background-color: #072D4F;
+}
+
+.racecard-table-affiliate--bet-uk {
+    color: #FFF;
+    background-color: #002d4f;
+}
+
+.racecard-table-affiliate--sporting-index {
+    color: #FFF;
+    background-color: #041E42;
+}
+
+.racecard-table-affiliate--livescore-bet {
+    color: #FFF;
+    background-color: #0b0b0b;
+}
+
+.racecard-table-affiliate--quinn-bet {
+    color: #FFF;
+    background-color: #000;
+}
+
+.racecard-table-affiliate--betway {
+    color: #FFF;
+    background-color: #000;
+}
+
+.racecard-table-affiliate--ladbrokes {
+    color: #FFF;
+    background-color: #f01e28;
+}
+
+.racecard-table-affiliate--tote {
+    color: #FFF;
+    background-color: #FF000D;
+}
+
+.racecard-table-affiliate--pari-match {
+    color: #FFF;
+    background-color: #000;
+}
+
+.racecard-table-affiliate--v-bet {
+    color: #FFF;
+    background-color: #d82b8f;
+}
+
+.racecard-table-affiliate--betfair-exchange {
+    color: #212121;
+    background-color: #ffb80c;
+}
+
+.racecard-table-affiliate--matchbook {
+    color: #FFF;
+    background-color: #c51a1b;
+}
+
+.racecard-affiliate-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25em;
+    color: #0d1522;
+    border: 1px dashed rgb( 0 0 0 / .05 );
+    padding: .5em;
+    text-decoration: none;
+    font-size: .75rem;
+    line-height: 1;
+    font-weight: 700;
+    width: calc( 100% - .5rem );
+    height: 2.5rem;
+    background-color: rgb( 0 0 0 / .05 )
+}
+
+.racecard-affiliate-link[href]:hover,
+.racecard-affiliate-link[href]:focus {
+    color: #FFF;
+    background-color: #02bb05;
+}
+
+.racecard-number-cell {
+    color: #FFF;
+    background-color: #0d1522;
+    background-image: linear-gradient( 135deg, #0d1522, #3d444e );
+    text-align: center;
+}
+
+.racecard-position,
+.racecard-number {
+    width: 1.75rem;
+    border-radius: 10em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: .75rem;
+    font-weight: 700;
+    height: 36px;
+}
+
+.racecard-number--result {
+    color: #FFF;
+    background-color: transparent;
+    border: 1px solid rgb( 255 255 255 / .25 );
+}
+
+.racecard-position--1 {
+    color: #FFF;
+    background-color: #C9B037;
+}
+
+.racecard-position--2 {
+    color: #FFF;
+    background-color: #B4B4B4;
+}
+
+.racecard-position--3 {
+    color: #FFF;
+    background-color: #AD8A56;
+}
+
+.racecard-non-runner {
+    opacity: 0.25;
+    background-image: linear-gradient( 135deg, #FFF, #F8F8F8 );
+}
+
+
+.cell-center {
+    text-align: center;
+}

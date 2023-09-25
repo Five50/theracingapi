@@ -1,0 +1,36 @@
+{
+  "name": "getmediawise/theracing-api",
+  "description": "Central plugin for external libraries",
+  "version": "0.1.0",
+  "keywords": [
+    "WordPress",
+    "Plugin"
+  ],
+  "authors": [
+    {
+      "name": "Karl Adams",
+      "email": "karl.adams@getmediawise.com",
+      "role": "Developer"
+    }
+  ],
+  "config": {
+    "platform": {
+      "php": "7.4.1"
+    }
+  },
+  "require": {
+    "guzzlehttp/psr7": "^1.8",
+    "nesbot/carbon": "2.62.0",
+    "symfony/dom-crawler": "^5.3",
+    "symfony/css-selector": "^5.3",
+    "ext-intl": "*",
+    "ext-openssl": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Monolog\\": "src/",
+      "Vendor\\Namespace\\": ""
+    }
+  }
+}
